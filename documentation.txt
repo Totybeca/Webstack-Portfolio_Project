@@ -1,0 +1,1 @@
+This is a portfolio project with the aim to build a full functional electronic store whose purpose will serve as an e-commerce 
