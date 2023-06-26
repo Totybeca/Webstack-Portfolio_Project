@@ -7,6 +7,12 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 djangorestframework-xml = "*"
+django-templated-mail = "*"
+djangorestframework-simplejwt = "*"
+djoser = "*"
+oauthlib = "*"
+django-debug-toolbar = "*"
+mysqlclient = "*"
 
 [dev-packages]
 
