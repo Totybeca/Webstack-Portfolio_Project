@@ -7,12 +7,19 @@ Webstack - Portfolio Project - Pitch
 Group project
 Portfolio project
 Presentation
+ 
  By: Holberton Staff
+ 
  Weight: 1
+ 
  Project to be done in teams of 4 people (your team: Toyin Fashemore, Ikechukwu Nwamah, Bode Olaleye, LIGHT ENYINNAH)
+ 
  Project will start Jun 19, 2023 6:00 AM, must end by Jun 30, 2023 6:00 AM
+ 
  Manual QA review must be done (request it when you are done with the project)
+
 Concepts
+
 For this project, we expect you to look at this concept:
 
 Portfolio project
