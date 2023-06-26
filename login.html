@@ -14,7 +14,7 @@ html{
 body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(#141e30, #243b55);
+  background-image: url(https://th.bing.com/th/id/R.ed2fd4cfc130f1b7e7bce185424df02b?rik=%2fmlJUFCAflOj9g&pid=ImgRaw&r=0); 
 }
 .login{
   position: absolute;
@@ -23,16 +23,17 @@ body{
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: teal;
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 10px 25px rgba(0,0,0,.6);
   border-bottom: 1.50px solid #03e9f4;
   border-radius: 10px;
+  transparency: 50%;
 }
 .login h2{
   margin: 0 0 30px;
   padding: 0;
-  color: #03e9f4;
+  color: #03e9f5;
   text-align: center;
 }
 .login .user-box{
@@ -42,7 +43,7 @@ body{
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: darkgray;
+  color: blue;
   margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #03e9f4;
@@ -79,9 +80,9 @@ body{
   display: inline-block;
   padding: 10px 20px;
   color: #03e9f4;
-  font-size: 16px;
+  font-size: 20px;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: lowercase;
   overflow: hidden;
   transition: 0.5s;
   margin-top: 40px;
@@ -120,7 +121,7 @@ body{
   top: -100%;
   right: 0;
   width: 2px;
-  height: 100%;
+  height: 50%;
   background: linear-gradient(90deg, transparent, #03e9f4);
   animation: animatedbtn2 1s linear infinite;
   animation-delay: .15s;
@@ -165,11 +166,11 @@ body{
   0%{
     bottom: -100%;
   }
-  50%,100%{
-    bottom: 100%;
+  50%,50%{
+    bottom: 50%;
   }
 }
-@media screen and (max-width:430px){
+@media screen and (max-width:500px){
   .login{
     width: 90%;
   }
@@ -190,18 +191,14 @@ body{
         <input type="password" required>
         <label>Password</label>
       </div>
-      <p><input type="checkbox">Remember me <span>Forgot?</span></p>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        login
-   
-      </a>
+      <p><input type="checkbox">Remember me <span>forgot password?<span></p>
+      
+      <div>
+      	<a href="#">login</a>
+       	<a href="#">signup</a>
+      </div>
     </form>
   </div>
   
 </body>
 </html>
-
