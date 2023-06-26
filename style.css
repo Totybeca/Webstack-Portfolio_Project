@@ -131,7 +131,6 @@ margin-bottom: 6px;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    background-color: #a9a9a92b;
      z-index: 0;
 }
 .home .img{
@@ -210,3 +209,6 @@ margin-bottom: 6px;
     } 
     
 /*home content */ 
+#bdy{
+    background-color: white;
+}
