@@ -13,6 +13,7 @@ djoser = "*"
 oauthlib = "*"
 django-debug-toolbar = "*"
 mysqlclient = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
