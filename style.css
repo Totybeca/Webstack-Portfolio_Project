@@ -223,7 +223,7 @@ margin-bottom: 6px;
   animation-duration: 4s;
 }
 @keyframes product {
-    from {background-color: rgb(21 0 86);}
+    from {background-color: rgb(181, 167, 222);}
     to {background-color: #ff0008;}
   }
   
@@ -258,7 +258,7 @@ margin-bottom: 6px;
     color: black;
     cursor: pointer;
 }
-@media screen and (max-width:100px){
+@media screen and (max-width:1000px){
 #product-cards .card h3{
 font-size: 18px;
 }
