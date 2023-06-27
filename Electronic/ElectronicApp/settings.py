@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'ElectronicWebAPI',
     'accounts',
 ]
+AUTH_USER_MODEL = 'ElectronicWebAPI.CustomUser'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -156,4 +158,3 @@ REST_FRAMEWORK = {
 
 }
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
