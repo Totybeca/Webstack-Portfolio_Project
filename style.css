@@ -219,8 +219,14 @@ margin-bottom: 6px;
 /* products-cards */
 #product-cards{
     margin-top: 100px;
-    
+    animation-name: product;
+  animation-duration: 4s;
 }
+@keyframes product {
+    from {background-color: rgb(21 0 86);}
+    to {background-color: #ff0008;}
+  }
+  
 #product-cards h1{
     color: #ff0008;
     text-shadow: 1px 1px 1px black;
