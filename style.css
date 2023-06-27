@@ -219,6 +219,7 @@ margin-bottom: 6px;
 /* products-cards */
 #product-cards{
     margin-top: 100px;
+    
 }
 #product-cards h1{
     color: #ff0008;
@@ -226,7 +227,12 @@ margin-bottom: 6px;
     border-bottom: 2px solid #ff0008;
 }
 #product-cards .card h3{
+    font-size: 25px;
+    color: black;
+}
+#product-cards .card p{
     font-size: 12px;
+    margin-top: 5px;
     color: black;
 }
 .star i{
@@ -236,7 +242,7 @@ margin-bottom: 6px;
 .checked{
     color: #ff0008;
 }
-#product-cards .card h3{
+#product-cards .card h2{
     font-size: 20px;
     color: black;
     margin-top: 20px;
