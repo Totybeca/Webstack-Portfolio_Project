@@ -114,7 +114,7 @@ function checkLastName(lastName) {
  }
 }
 
-function checkLastName(userName) {
+function checkUserName(userName) {
 
     if (lastName.value === '') {
       alertStyle = document.getElementById('uName').style.border = '2px solid rgba(255, 6, 0)';
@@ -128,21 +128,21 @@ function checkLastName(userName) {
   }
 
   
-  function checkLastName(emailAddress) {
+  function checkEmail(email) {
 
     if (lastName.value === '') {
-      alertStyle = document.getElementById('eAddress').style.border = '2px solid rgba(255, 6, 0)';
-      alertImg = document.getElementById('eAddressMsg').style.display = 'inline-block';
+      alertStyle = document.getElementById('email').style.border = '2px solid rgba(255, 6, 0)';
+      alertImg = document.getElementById('emailMsg').style.display = 'inline-block';
       return false;
     } else if (lastName.value !== '') {
-      alertStyle = document.getElementById('eAddress').style.border = '1px solid #ccc';
-      alertImg = document.getElementById('eAddressMsg').style.display = 'none';
+      alertStyle = document.getElementById('email').style.border = '1px solid #ccc';
+      alertImg = document.getElementById('emailMsg').style.display = 'none';
       return true;
    }
   }
 
   
-  function checkLastName(password) {
+  function checkPassword(password) {
 
     if (lastName.value === '') {
       alertStyle = document.getElementById('password').style.border = '2px solid rgba(255, 6, 0)';
@@ -172,7 +172,7 @@ function checkSubject(subject) {
 
     function formValidation(contactForm) {
 
-        if (firstName && lastName && userName && emailAddress && password && subject !== true) {
+        if (firstName && lastName && userName && email && password && subject !== true) {
           alert('Please fill out required fields.')
           event.preventDefault()
           return false;
