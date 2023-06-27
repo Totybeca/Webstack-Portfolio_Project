@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
     'ElectronicWebAPI',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,5 @@ REST_FRAMEWORK = {
 
 
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'

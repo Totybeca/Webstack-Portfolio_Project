@@ -14,6 +14,7 @@ oauthlib = "*"
 django-debug-toolbar = "*"
 mysqlclient = "*"
 django-cors-headers = "*"
+accounts = "*"
 
 [dev-packages]
 
