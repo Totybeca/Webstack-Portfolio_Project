@@ -66,7 +66,7 @@ ROOT_URLCONF = 'ElectronicApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,9 +89,9 @@ DATABASES = {
     'default': {   
         'ENGINE': 'django.db.backends.mysql',   
         'NAME': 'django_db',   
-        'USER': 'root',   
-        'PASSWORD': 'my_password',    
-        'HOST': 'localhost',   
+        'USER': 'django_db',   
+        'PASSWORD': 'password',    
+        'HOST': '127.0.0.1',   
         'PORT': '3306',   
         'OPTIONS': {   
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   

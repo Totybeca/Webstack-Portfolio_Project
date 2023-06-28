@@ -7,7 +7,7 @@ class SignUpForm(UserCreationForm):
     last_name = forms.CharField(max_length=30)
     username = forms.CharField(max_length=30)
     password = forms.CharField(max_length=30)
-    email = forms.EmailField(max_length=100)
+    email = forms.EmailField(max_length=100, label="Enter Email Address")
     subject = forms.CharField(max_length=200)
 
     class Meta:
