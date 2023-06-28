@@ -15,6 +15,7 @@ django-debug-toolbar = "*"
 mysqlclient = "*"
 django-cors-headers = "*"
 accounts = "*"
+pymysql = "*"
 
 [dev-packages]
 
