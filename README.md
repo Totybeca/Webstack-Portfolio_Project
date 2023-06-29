@@ -1,1 +1,1 @@
-This is combination of both the frontend and backend of an electronic e-commerce website, built with python as its major tech stack
+This is combination of both the frontend and backend of an electronic e-commerce website, built with python as its major tech stack, the framework for the backend of this project is Django and it will be running on Appache2 server.
