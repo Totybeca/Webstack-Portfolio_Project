@@ -1,184 +1,184 @@
-<form id="contactForm" action="https://formspree.io/xrggbejj" method="POST" onsubmit="return formValidation(contactForm);">
-
-    <div class="row">
-  
-    <div class="col">
-        <label for="fName">First Name</label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--boostrap links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--boostrap links-->
+    <!--fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!--fonts link-->
+</head>
+<body>
+<!--Navigation bar at the top-->
+<div class="top-navbar">
+    <p>WELCOME TO TEAM SWIFT'S ELECTROMART</p>
+    <div class="icons">
+        <a href="login.html" target="blank"><i class="fa fa-sign-in" aria-hidden="true"></i></i>Login</a>
+        <a href="register.html" style="margin: 20px;" target="blank"><i class="fa fa-sign-in" aria-hidden="true"></i></i>Register</a>
     </div>
-    <div class="col">
-        <input type="text" id="fName" name="firstName" onblur="checkFirstName(firstName)" autofocus/>
-        <img src="" class="alert" id="firstNameMsg" alt="alert icon" width="40" height="35"/>
+</div>
+<!--Navigation bar at the top-->
+
+<!--Navigation bar-->
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="./images/menu.png" alt="" width="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              All Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+              <li><a class="dropdown-item" href="#" target="blank">Mobile phones</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Computers</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Air Conditioners</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">AirPods</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Smart Watches</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Head Phones</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Washine Machines</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">PC Monitors</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html" target="blank">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html" target="blank">Contact Us</a>
+              </li>
+            </ul>
+
+          <form class="d-flex" id="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" target="blank">Search</button>
+        </form>
+      </div>
     </div>
-    </div> <!-- End of row -->
-  
-    <div class="row">
-    <div class="col">
-        <label for="lName">Last Name</label>
+  </nav>
+<!--Navigation bar-->
+
+
+
+
+
+
+
+
+<div class="container" id="login">
+  <div class="row">
+      <div class="col-md-5 py-3 py-md-0" id="side1">
+          <h3 class="text-center">Register</h3>
+      </div>
+      <div class="col-md-7 py-3 py-md-0" id="side2">
+          <h3 class="text-center">Create Account</h3>
+          <div class="input2 text-center">
+          <input type="name" placeholder="Name">
+          <input type="name" placeholder="User Name">
+          <input type="number" placeholder="Phone">
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Password">
+          </div>
+          <p class="text-center" id="btnlogin"><a href="#">SIGN UP</a></p>
+      </div>
+
+  </div>
+ </div>
+
+
+ <!-- footer -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>ELECTROMART</h3>
+          <p>
+            Toyin <br>
+            Light <br>
+            James <br>
+            Bode<br>
+          </p>
+          <strong>Phone:</strong> +23456444999333 <br>
+          <strong>Email:</strong> teamswift@gmail.com <br>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Take note</h4>
+         <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Privacy policy</a></li>
+         </ul>
+        </div>
+
+
+
+       
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+
+         <ul>
+          <li><a href="#">Mac Book</a></li>
+          <li><a href="#">Home appliances</a></li>
+          <li><a href="#">Ipad</a></li>
+          <li><a href="#">Mobile Phone</a></li>
+          <li><a href="#">Kitchen Gadgets</a></li>
+         </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Social Media</h4>
+          <p>You can contact us on any of the following social media handles.</p>
+
+          <div class="socail-links mt-3">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        
+        </div>
+
+      </div>
     </div>
-    <div class="col">
-        <input type="text" id="lName" name="lastName" onblur="checkLastName(lastName)" autofocus/>
-        <img src="#" class="alert" id="lastNameMsg" alt="alert icon" width="40" height="35"/>
+  </div>
+  <hr>
+  <div class="container py-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>ELECTROMART</span></strong>. All Rights Reserved
     </div>
-    
-    <div class="row">
-    <div class="col">
-        <label for="uName">Username</label>
+    <div class="credits">
+      Designed by <a href="#">Team Swift</a>
     </div>
-    <div class="col">
-        <input type="text" id="uName" name="userName" onblur="checkUserName(userName)" autofocus/>
-        <img src="" class="alert" id="userNameMsg" alt="alert icon" width="40" height="35"/>
-    </div>
-    <div class="row">
-    <div class="col">
-        <label for="email">Email<VTextField
-        label="E-mail"
-        v-model="value"
-        :rules="[rules.required, rules.email]"
-        ></VTextField></label>
-    </div>
-    <div class="col">
-        <input type="text" id="email" name="email" onblur="checkEmail(email)" autofocus/>
-        <img src="" class="alert" id="emailMsg" alt="alert icon" width="40" height="35"/>
-    </div>
-    
-    <div class="row">
-    <div class="col">
-        <label for="password">Password<v-text-field
-        name="name"
-        label="Enter your password"
-        hint="At least 8 characters"
-        min="8"
-        :append-icon="value ? 'visibility' : 'visibility_off'"
-        :append-icon-cb="() => (value = !value)"
-        value="Password"
-        :rules="[() => ('The email and password you entered don\'t match')]"
-        error
-        :type="value ? 'password' : 'text'"
-        ></v-text-field></label>
-    </div>
-    <div class="col">
-        <input type="text" id="password" name="password" onblur="checkPassword(firstName)" autofocus/>
-        <img src="" class="alert" id="passwordMsg" alt="alert icon" width="40" height="35"/>
-    </div>
-    </div> <!-- End of row -->
-  
-    <div class="row">
-    <div class="col">
-        <label for="subject">Questions and/or Comments</label>
-    </div>
-    <div class="col">
-        <textarea id="subject" name="subject" onblur="checkSubject(subject)" style="height:200px"></textarea>
-        <img src="#" class="alert" id="subjectMsg" alt="alert icon" width="40" height="35"/>
-    </div>
-    </div> <!-- End of row -->
-    <div class="row">
-        <input type="submit" value="SEND" />
-    </div> <!-- End of row -->
-  </form>
+  </div>
+</footer>
+<!-- footer -->
 
 
 
-<script>
-var alertStyle;
-var alertImg;
-const firstName = document.forms['contactForm']['fName'];
-const lastName = document.forms['contactForm']['lName'];
-const userName = document.forms['contactForm']['uName'];
-const emailAddress = document.forms['contactForm']['eAddress'];
-const password = document.forms['contactForm']['password'];
-const subject = document.forms['contactForm']['subject'];
 
-function checkFirstName(firstName) {
 
-  if (firstName.value === '') {
-    alertStyle = document.getElementById('fName').style.border = '2px solid rgba(255, 6, 0)';
-    alertImg = document.getElementById('firstNameMsg').style.display = 'inline-block';
-    return false;
-  } else if (firstName.value !== '') {
-    alertStyle = document.getElementById('fName').style.border = '1px solid #ccc';
-   alertImg = document.getElementById('firstNameMsg').style.display = 'none';
-   return true;
- }
-}
 
-function checkLastName(lastName) {
-
-  if (lastName.value === '') {
-    alertStyle = document.getElementById('lName').style.border = '2px solid rgba(255, 6, 0)';
-    alertImg = document.getElementById('lastNameMsg').style.display = 'inline-block';
-    return false;
-  } else if (lastName.value !== '') {
-    alertStyle = document.getElementById('lName').style.border = '1px solid #ccc';
-    alertImg = document.getElementById('lastNameMsg').style.display = 'none';
-    return true;
- }
-}
-
-function checkUserName(userName) {
-
-    if (lastName.value === '') {
-      alertStyle = document.getElementById('uName').style.border = '2px solid rgba(255, 6, 0)';
-      alertImg = document.getElementById('userNameMsg').style.display = 'inline-block';
-      return false;
-    } else if (lastName.value !== '') {
-      alertStyle = document.getElementById('uName').style.border = '1px solid #ccc';
-      alertImg = document.getElementById('userNameMsg').style.display = 'none';
-      return true;
-   }
-  }
-
-  
-  function checkEmail(email) {
-
-    if (lastName.value === '') {
-      alertStyle = document.getElementById('email').style.border = '2px solid rgba(255, 6, 0)';
-      alertImg = document.getElementById('emailMsg').style.display = 'inline-block';
-      return false;
-    } else if (lastName.value !== '') {
-      alertStyle = document.getElementById('email').style.border = '1px solid #ccc';
-      alertImg = document.getElementById('emailMsg').style.display = 'none';
-      return true;
-   }
-  }
-
-  
-  function checkPassword(password) {
-
-    if (lastName.value === '') {
-      alertStyle = document.getElementById('password').style.border = '2px solid rgba(255, 6, 0)';
-      alertImg = document.getElementById('passwordMsg').style.display = 'inline-block';
-      return false;
-    } else if (lastName.value !== '') {
-      alertStyle = document.getElementById('password').style.border = '1px solid #ccc';
-      alertImg = document.getElementById('passwordMsg').style.display = 'none';
-      return true;
-   }
-  }
-  
-
-function checkSubject(subject) {
-    function checkSubject(subject) {
-
-        if (subject.value === '') {
-          alertStyle = document.getElementById('subject').style.border = '2px solid rgba(255, 6, 0)';
-          alertImg = document.getElementById('subjectMsg').style.display = 'inline-block';
-          return false;
-        } else if (firstName.value !== '') {
-          alertStyle = document.getElementById('subject').style.border = '1px solid #ccc';
-          alertImg = document.getElementById('subjectMsg').style.display = 'none';
-          return true;
-      }}
-
-    </script>
-    <script>
-      function formValidation(contactForm) {
-
-        if (firstName && lastName && userName && email && password && subject !== true) {
-          alert('Please fill out required fields.')
-          event.preventDefault()
-          return false;
-        } else if (firstName && lastName && subject === true) {
-          return true;
-       }
-      }
-    </script>
+</body>
+</html>
