@@ -1,16 +1,18 @@
 from django.urls import path
+from django.views.decorators.cache import never_cache
+from debug_toolbar.views import render_panel
+
 from . import views
 
-app_name = 'djdt'
+app_name = 'ElectronicWebAPI'
 
 urlpatterns = [
-    path('signup/', views.signup, name='signup'),
-    path('base/', views.base, name='base'),
-    path('home/', views.home, name='home'),
-    path('about_us/', views.about_us, name='about_us'),
-    path('contact_us/', views.contact_us, name='contact_us'),
-    path('our_product/', views.our_product, name='our_product'),
-    path('all_categories/', views.all_categories, name='all_categories'),
-    path('_footer/', views._footer, name='_footer'),
-    path('_header/', views._header, name='_header'),
+    path('render_panel/', never_cache(render_panel), name='render_panel'),
+    path('register/', views.register_view, name='register'),
+    path('base/', views.base_view, name='base'),
+    path('home/', views.home_view, name='home'),
+    path('about/', views.about_view, name='about_us'),
+    path('contact', views.contact_view, name='contact_us'),
+    path('product/', views.product_view, name='our_product'),
+    path('categories/', views.categories_view, name='all_categories'),
 ]

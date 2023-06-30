@@ -1,29 +1,27 @@
 from django.shortcuts import render, redirect
 from .forms import SignUpForm
 
-def signup(request):
+def register_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('login')  # Redirect to the login page after successful signup
+            user = form.save()
+            # Display a success message
+            message = 'Sign-up successful. Please log in.'
+            return render(request, 'templates/success.html', {'message': message})
     else:
         form = SignUpForm()
-    return render(request, 'templates/register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
-def base(request):
-    return render(request, './templates/base.html')
-def home(request):
-    return render(request, './templates/home.html')
-def about_us(request):
-    return render(request, './templates/about_us.html')
-def contact_us(request):
-    return render(request, './templates/contact_us.html')
-def our_product(request):
-    return render(request, './templates/our_product.html')
-def all_categories(request):
-    return render(request, './templates/all_categories.html')
-def _header(request):
-    return render(request, './templates/partials/_header.html')
-def _footer(request):
-    return render(request, './templates/partials/_footer.html')
+def base_view(request):
+    return render(request, 'base.html')
+def home_view(request):
+    return render(request, 'home.html')
+def about_view(request):
+    return render(request, 'about.html')
+def contact_view(request):
+    return render(request, 'contact.html')
+def product_view(request):
+    return render(request, 'product.html')
+def categories_view(request):
+    return render(request, 'categories.html')
