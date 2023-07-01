@@ -1,85 +1,82 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
 <section>
   <article>
-    <h1>
-      About Us
-      <h1>
-        <div class="about-section" style="margin-top: 100px; margin-top: 30px">
-          <div class="about-section" style="margin-top: 100px">
-            <h1>About Us Page</h1>
+    <h1>About Us</h1>
+    <div class="about-section" style="margin-top: 100px">
+      <h2>About Us Page</h2>
+      <p>
+        The TEAM SWIFT SHOP was developed by 3 individuals who came
+        together to solve the shopping hassle issue for most individuals
+        who are so busy that they find stepping into a physical shop so
+        difficult. In line with our objective, we make shopping faster and
+        more convenient for every individual and guarantee high
+        quality products from our stores. TEAM SWIFT SHOP is a registered
+        company under the Corporate Affairs Commission with the company
+        number: RC:34536 and happens to be one of the most reliable
+        electronics shops for high-quality and durable products.
+      </p>
+      <br />
+      <p>"Your satisfaction is our watchword"</p>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 20px">Our Team</h2>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img
+            src="{% static 'images/Emerald.jpg' %}"
+            alt="Emerald"
+            width="150"
+            height="150"
+          />
+          <div class="container">
+            <h2 class="text-center">Emerald</h2>
+            <p class="title">Front-end Developer</p>
             <p>
-              The TEAM SWIFT SHOP was developed by 3 individuals who came
-              together to solve the shoppping hassle issue for most individuals
-              who are so busy that they find stepping into a physical shop so
-              difficult. In line with our objective, we make shopping faster and
-              more convienient for every individual and a guarantee of high
-              quality product form our stores. TEAM SWIFT SHOP is a registered
-              company under the corporate affairs commision with the company
-              number: RC:34536 and happens to be one of the most reliable
-              electronics shop for high quality and durable products.
+              Med Educational Management<br />
+              Skills: HTML, CSS, Javascript.
             </p>
-            <br />
-            <p>"Your satisfaction is our watchword"</p>
-          </div>
-
-          <h1 style="text-align: center; margin-top: 20px">Our Team</h1>
-          <div class="row">
-            <div class="column">
-              <div class="card">
-                <img
-                  src="{% static './images/Emerald.jpg' %}"
-                  alt="Emerald"
-                  width="150"
-                  height="150"
-                />
-                <div class="container">
-                  <h2 class="text-center">Emerald</h2>
-                  <p class="title">Front-end Developer</p>
-                  <p>
-                    Med Educational Management<br />
-                    Skills: HTML, CSS, Javascript.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="card">
-                <img
-                  src="{% static .'/images/james1.jpg'%}"
-                  alt="James"
-                  width="150"
-                  height="150"
-                />
-                <div class="container">
-                  <h2>James</h2>
-                  <p class="title">Backend Developer</p>
-                  <p>
-                    I am a software engineer with Technical proficiency in
-                    certain programming languages and technologies.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="card">
-                <img
-                  src="{% static './images/Light.jpg' %}"
-                  alt="Light"
-                  width="150"
-                  height="150"
-                />
-                <div class="container">
-                  <h2>Light</h2>
-                  <p class="title">Front-End Designer</p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </h1>
-    </h1>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img
+            src="{% static 'images/james1.jpg' %}"
+            alt="James"
+            width="150"
+            height="150"
+          />
+          <div class="container">
+            <h2>James</h2>
+            <p class="title">Backend Developer</p>
+            <p>
+              I am a software engineer with technical proficiency in
+              certain programming languages and technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img
+            src="{% static 'images/Light.jpg' %}"
+            alt="Light"
+            width="150"
+            height="150"
+          />
+          <div class="container">
+            <h2>Light</h2>
+            <p class="title">Front-End Designer</p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </article>
 </section>
 {% endblock %}

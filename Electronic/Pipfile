@@ -16,6 +16,7 @@ mysqlclient = "*"
 django-cors-headers = "*"
 accounts = "*"
 pymysql = "*"
+python-memcached = "*"
 
 [dev-packages]
 

@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e)e-z6#(tx^_ym+jb)-)7v7g8%t)nqwi5hb#8=se@-$rjk+-9@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -60,6 +60,17 @@ INTERNAL_IPS = [
     # other IP addresses
     '127.0.0.1',
 ]
+
+def show_toolbar(request):                                     
+    return True                                                 
+
+DEBUG_TOOLBAR_CONFIG = {                                       
+    "SHOW_TOOLBAR_CALLBACK" : show_toolbar,                    
+}                                                              
+
+if DEBUG:                                                   
+    import mimetypes                                                     
+    mimetypes.add_type("application/javascript", ".js", True)
 
 ROOT_URLCONF = 'ElectronicApp.urls'
 
@@ -116,6 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
 
 
 # Internationalization
