@@ -14,8 +14,8 @@ html{
 body{
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  background-size: 0cqmin;
+  background-image: url(https://onaircode.com/wp-content/uploads/2019/09/background-wave-1024x575.jpg);
+  background-size: cover;
 .login{
   position: absolute;
   top: 50%;
@@ -23,17 +23,16 @@ body{
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgb(59, 55, 181);
+  background: transparent;
   box-sizing: border-box;
-  box-shadow: 0 10px 25px rgba(238, 236, 247, 0.6);
-  border-bottom: 1.50px solid #03e9f4;
+  border-bottom: 1.50px solid #0fe32e;
   border-radius: 10px;
   
 }
 .login h2{
   margin: 0 0 30px;
   padding: 0;
-  color: #03e9f5;
+  color: #eef4f4;
   text-align: center;
 }
 .login .user-box{
@@ -55,7 +54,7 @@ body{
   top:0;
   left: 0;
   padding: 10px 0;
-  color: #03e9f4;
+  color: #eff5f6;
   pointer-events: none;
   font-size: 16px;
   transition: 0.5s;
@@ -64,22 +63,22 @@ body{
 .login .user-box input:valid ~ label{
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: #eaf2f2;
   font-size: 12px;
 }
 .login p{
-  color: darkgray;
+  color: rgb(216, 239, 6);
   cursor: pointer;
 }
 .login p span{
-  color: #03e9f4;
+  color: #d6dada;
   float: right;
 }
 .login form a{
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #03e9f4;
+  color: #ecf4f4;
   font-size: 20px;
   text-decoration: none;
   text-transform: lowercase;
@@ -89,13 +88,13 @@ body{
   letter-spacing: 4px;
 }
 .login a:hover{
-  background: #03e9f4;
+  background: #2e08a3;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+  box-shadow: 0 0 5px #4804a9,
+              0 0 25px #4602d9,
+              0 0 50px #4604de,
+              0 0 100px #4502e3;
 }
 .login a span{
   position: absolute;
@@ -170,7 +169,7 @@ body{
     bottom: 50%;
   }
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:1000px){
   .login{
     width: 90%;
   }
@@ -192,7 +191,7 @@ body{
       </div>
       <p><input type="checkbox">Remember me <span>forgot password?<span></p>
       <div>
-      	<a href="#">login</a>
+      	<a href="#">Login</a>
         <a href="register.html" style="margin: 20px;" target="blank">signup</a>
       </div>
     </form>
