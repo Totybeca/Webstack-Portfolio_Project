@@ -1,0 +1,1 @@
+This is a backend django web application developed by Ikechukwu Nwamah
