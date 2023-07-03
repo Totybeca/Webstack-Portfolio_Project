@@ -118,12 +118,7 @@ margin-bottom: 6px;
     background-color: red;
 }
 
-/* header end */
-
-
-
-
-
+/* header end*/
 
 .home{
     width: 100%;
@@ -154,7 +149,7 @@ margin-bottom: 6px;
     text-shadow: -1px 1px 1px  black;
 }
 .content h1 span{
-    color:#000080;
+    color:#ff0008;
     text-shadow: 1px  1px  1px  black;
 }
 #span2{
@@ -213,12 +208,10 @@ margin-bottom: 6px;
     
 /*home content items */ 
 
-
-
 #body{
     background-color: white;
 }
-/* products */
+/* Products start*/
 #product-cards{
     margin-top: 100px;
     animation-name: product;
@@ -265,13 +258,12 @@ margin-bottom: 6px;
 font-size: 18px;
 }
 }
-    
-/* products */
+/* Products end */
 
 
 
 
-/* cards */
+/* Cards start*/
 #other-cards{
     margin-top: 30px;
 }
@@ -302,7 +294,6 @@ font-size: 18px;
     margin-left: 10px;
     letter-spacing: 3px;
 }
-
 #shopnow{
     width: 130px;
     height: 30px;
@@ -314,7 +305,6 @@ font-size: 18px;
     border: none;
     cursor: pointer;
 }
-
 @media screen and (max-width:1000px){
     #other-cards .card h3{
         margin-top: 5px;
@@ -335,11 +325,10 @@ font-size: 18px;
         font-size: 16px;
     }
 }
+/*cards end */
 
-/*cards */
 
-
-/* The banner */
+/* Banner start*/
 .banner{
     margin-top: 60px;
     width: 100%;
@@ -373,8 +362,9 @@ font-size: 18px;
     text-shadow: -1px 1px 1px white;
 }
 .banner .content h1 span{
-    color: rgb(21 0 86);
+    color: black;
     text-shadow: 1px 1px 1px black;
+    font-weight: bolder;
 }
 #span2{
     color: #ff0008;
@@ -432,17 +422,12 @@ font-size: 18px;
     font-size: 36px;
    }
 }
-/* The banner */
+/* Banner end*/
 
 
 
 
-
-
-
-
-
-/* other cards */
+/* other cards start */
 #other{
     margin-top: 50px;
 }
@@ -463,12 +448,12 @@ font-size: 18px;
     letter-spacing: 3px;
     font-weight: bold;
 }
-/* Other types of cards */
+/* Other cards end */
 
 
 
 
-/* Offer */
+/* Offer end*/
 #offer{
     margin-top: 100px;
 }
@@ -476,12 +461,12 @@ font-size: 18px;
     font-size: 32px;
     color: red;
 }
-/* Offer */
+/* Offer start*/
 
 
 
 
-/* Newsletter */
+/* Newsletter start */
 #newsletter{
     margin-top: 100px;
 }
@@ -528,12 +513,12 @@ font-size: 18px;
         width: 150px;
     }
 }
-/* newsletter */
+/* Newsletter end*/
 
 
 
 
-/* The footer */
+/*  The footer */
 #footer{
     padding: 0 0 30px 0px;
     color: white;
@@ -629,7 +614,7 @@ font-size: 18px;
 #footer .credits a{
     color: #ff0008;
 }
-/* The footer */
+/* Footer end */
 
 
 
@@ -649,10 +634,7 @@ html{
 }
 
 
-
-
-
-/* login */
+/* Login start */
 #login{
     width: 65%;
     height: 70vh;
@@ -715,16 +697,11 @@ html{
         height: 60vh;
     }
 }
-/* login */
+/* Login end */
 
 
 
-
-
-
-
-
-/* Contact */
+/* Contact start */
 #contact{
     margin-top: 50px;
 }
@@ -763,4 +740,4 @@ html{
     background-color:#000080;
     color: white;
 }
-/* Contact */
+/* Contact end */

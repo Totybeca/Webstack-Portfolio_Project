@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from django.contrib.messages import constants as messages
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,15 @@ SECRET_KEY = 'django-insecure-e)e-z6#(tx^_ym+jb)-)7v7g8%t)nqwi5hb#8=se@-$rjk+-9@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangoproject.localhost']
+ALLOWED_HOSTS = ["localhost", '192.168.43.223']
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'info',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger'
+}
 
 
 # Application definition
@@ -38,9 +48,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'debug_toolbar',
     'ElectronicWebAPI',
     'accounts',
+    'social_django'
 ]
 AUTH_USER_MODEL = 'ElectronicWebAPI.CustomUser'
 
@@ -57,16 +69,27 @@ MIDDLEWARE = [
 ]
 
 INTERNAL_IPS = [
-    # Add your IP address(es) here
+    # other IP addresses
     '127.0.0.1',
 ]
+
+def show_toolbar(request):                                     
+    return True                                                 
+
+DEBUG_TOOLBAR_CONFIG = {                                       
+    "SHOW_TOOLBAR_CALLBACK" : show_toolbar,                    
+}                                                              
+
+if DEBUG:                                                   
+    import mimetypes                                                     
+    mimetypes.add_type("application/javascript", ".js", True)
 
 ROOT_URLCONF = 'ElectronicApp.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,6 +98,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+        # 'libraries':{
+        #                 'filename':  'ElectronicApp.templatetags',
+        #                 'file_exists': 'ElectronicApp.templatetags',
+
+        #     }
         },
     },
 ]
@@ -87,15 +115,13 @@ WSGI_APPLICATION = 'ElectronicApp.wsgi.application'
 
 DATABASES = {
     'default': {   
-        'ENGINE': 'django.db.backends.mysql',   
-        'NAME': 'django_db',   
-        'USER': 'django_db',   
-        'PASSWORD': 'password',    
-        'HOST': '127.0.0.1',   
-        'PORT': '3306',   
-        'OPTIONS': {   
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
-        }   
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',   
+        'NAME': 'electronic_db',   
+        'USER': 'ik_user',   
+        'PASSWORD': 'september95',    
+        'HOST': 'localhost',   
+        'PORT': '5432',   
+          
     }   
 }
 
@@ -118,12 +144,13 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Lagos'
 
 USE_I18N = True
 
@@ -135,12 +162,12 @@ USE_TZ = True
 
 import os
 
-STATIC_URL='/static/'
-STATIC_ROOT=os.path.join(BASE_DIR, 'static/')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media/')
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/uploads/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -164,3 +191,22 @@ REST_FRAMEWORK = {
 
 }
 
+#For Email Fill Out
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'email.host' # Host to domain 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'teamswifttechnology@gmail.com'
+EMAIL_HOST_PASSWORD = 'September95'
+DEFAULT_FROM_EMAIL = 'teamswifttechnology@gmail.com'
+
+#Redirects
+ LOGIN_REDIRECT_URL = 'ElectronicApp'
+ LOGIN_URL = 'login'
+
+#To Resize Images That Are Being Uploaded To Web App
+DJANGORESIZED_DEFAULT_SIZE = [500, 500]
+DJANGORESIZED_DEFAULT_QUALITY = 75
+DJANGORESIZED_DEFAULT_KEEP_META = True
+DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
+DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'PNG': ".png"}

@@ -2,11 +2,15 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 class CustomUser(AbstractUser):
-    username = models.CharField(max_length=200, unique=True)
-    password = models.CharField(max_length=200)
-    
+    first_name = models.CharField(max_length=200, default='')
+    last_name = models.CharField(max_length=200, default='')
+    email = models.EmailField(
+        max_length=255,
+        unique=True,
+        verbose_name='Email',
+        help_text='Please enter your email'
+    )
+    subject = models.CharField(max_length=200, default='')
+
     class Meta:
         swappable = 'AUTH_USER_MODEL'
-    
-    # CustomUser._meta.get_field('groups').remote_field.related_name = 'customuser_set'
-    # CustomUser._meta.get_field('user_permissions').remote_field.related_name = 'customuser_set'

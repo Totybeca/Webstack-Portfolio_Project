@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Home</h1>
+
+<!-- Our home content -->
+<section class="home">
+  <div class="content">
+    <h1>
+      <span>Electromart Products</span>
+      <br>
+      Up To <span id="span2">10%</span> Off
+    </h1>
+    <p>
+      At Team Swift's Electronic Mart, you are sure of the best.
+      <br>
+      Order now and get a 50% price discount!
+    </p>
+    <div class="btn">
+      <button>Shop Now!</button>
+    </div>
+  </div>
+  <div class="img">
+    <img src="{% static 'images/background.jpg' %}" alt="">
+  </div>
+</section>
+<!-- Our home content -->
+{% endblock %}
