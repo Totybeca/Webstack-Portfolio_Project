@@ -1,0 +1,7 @@
+#The following dependency are needed for the code to runs swiftly on linux server
+virtualenv venv
+source venv/bin/activate
+pip install django
+django-admin --version
+pip install mysqlclient
+sudo apt install apache2
