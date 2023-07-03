@@ -97,7 +97,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+             ],
         # 'libraries':{
         #                 'filename':  'ElectronicApp.templatetags',
         #                 'file_exists': 'ElectronicApp.templatetags',
@@ -201,8 +201,8 @@ EMAIL_HOST_PASSWORD = 'September95'
 DEFAULT_FROM_EMAIL = 'teamswifttechnology@gmail.com'
 
 #Redirects
- LOGIN_REDIRECT_URL = 'ElectronicApp'
- LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'ElectronicApp'
+LOGIN_URL = 'login'
 
 #To Resize Images That Are Being Uploaded To Web App
 DJANGORESIZED_DEFAULT_SIZE = [500, 500]
@@ -210,3 +210,8 @@ DJANGORESIZED_DEFAULT_QUALITY = 75
 DJANGORESIZED_DEFAULT_KEEP_META = True
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'PNG': ".png"}
+
+TINYMCE_FILEBROWSER = True
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+FILEBROWSER_DIRECTORY = ''
+DIRECTORY = ''

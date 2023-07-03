@@ -6,7 +6,7 @@ from django.utils import timezone
 from random import randint
 from django.contrib import messages
 from django.contrib.auth import SESSION_KEY, authenticate, login
-from django.contrib.auth.models import user, auth
+from django.contrib.auth.models import User, auth
 
 # Create views here
 
@@ -40,7 +40,7 @@ def logout(request):
 @anonymous_required
 def login(request):
     context = {"Message": 'Successful'}
-    return render(request, 'login', context)
+    return render(request, 'authentication/login.html', context)
     
     
     
@@ -48,28 +48,10 @@ def login(request):
 @anonymous_required
 def register(request):
     context = {"Message": 'Successful'}
-    return render(request, 'login', context)
+    return render(request, 'authentication/register.html', context)
 
 @login_required
 def dashboard(request):
     context = {"Message": 'Successful'}
-    return render(request, 'dashboard', context)
+    return render(request, 'authentication/dashboard.html', context)
 
-
-
-
-
-
-
-def base(request):
-    return render(request, 'base.html')
-def home(request):
-    return render(request, 'home.html')
-def about(request):
-    return render(request, 'about.html')
-def contact(request):
-    return render(request, 'contact.html')
-def product(request):
-    return render(request, 'product.html')
-def categories(request):
-    return render(request, 'categories.html')
