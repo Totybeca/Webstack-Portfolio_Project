@@ -19,14 +19,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 import debug_toolbar
-from . import views
 
 urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
     path('admin/', admin.site.urls),
     path('debug/', include('ElectronicWebAPI.urls')),
     path('', include('ElectronicWebAPI.urls')),
-    path('', views.home, name="home")
 ]
 
 #To help django find media files

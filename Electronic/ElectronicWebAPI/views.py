@@ -7,6 +7,8 @@ from random import randint
 from django.contrib import messages
 from django.contrib.auth import SESSION_KEY, authenticate, login
 from django.contrib.auth.models import User, auth
+from django.contrib.auth.forms import UserCreationForm
+
 
 # Create views here
 
@@ -54,4 +56,35 @@ def register(request):
 def dashboard(request):
     context = {"Message": 'Successful'}
     return render(request, 'authentication/dashboard.html', context)
+
+
+def home(request):
+    if request.method == 'POST':
+        # Retrieve the username and password from the form
+        username = request.POST['username']
+        password = request.POST['password']
+        
+        # Authenticate the user
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            # User is authenticated, log them in
+            login(request, user)
+            return redirect('dashboard')  # Redirect to the dashboard page after login
+        else:
+            # Authentication failed, display an error message
+            error_message = 'Invalid username or password.'
+            return render(request, 'authentication/register.html', {'error_message': error_message})
+    
+    return render(request, 'authentication/login.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')  # Redirect to login page after successful registration
+    else:
+        form = UserCreationForm()
+    return render(request, 'authentication/register.html', {'form': form})
 
