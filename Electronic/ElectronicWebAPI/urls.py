@@ -3,20 +3,32 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.register, name="register"),
+    path('register', views.register, name="register"),
+    path('login', views.login, name="login"),
+    path('dashboard', views.dashboard, name="dashboard"),
+    path('product', views.product, name="product"),
     #path('base', views.base, name="base"),
-    path('', views.about, name="about"),
-    path('', views.contact, name="contact"),
-    path('', views.product, name="product"),
-    # path('categories', views.categories, name="all_categories"),
-    path('', views.login, name="login"),
-    path('', views.dashboard, name="dashboard"),
-    path('', views.phones, name="phones"),
-    path('', views.computers, name="computers"),
-    path('', views.conditioners, name="conditioners"),
-    path('', views.air_pods, name="air_pods"),
-    path('', views.watches, name="watches"),
-    path('', views.head_phones, name="head_phones"),
-    path('', views.washing_machines, name="washing_machines"),
-    path('', views.monitors, name="monitors"),
+    path('about', views.about, name="about"),
+    path('contact', views.contact, name="contact"),
+    path('services',views.services, name="services"),
+    path('terms', views.terms, name="terms"),
+    path('privacy', views.privacy, name="privacy"),
+   
 ]
+     
+     
+#     
+#    
+     
+#     # path('categories', views.categories, name="all_categories"),
+    #path('phones', views.phones, name="phones"),
+#     path('computers', views.computers, name="computers"),
+#     path('conditioners', views.conditioners, name="conditioners"),
+#     path('air_pods', views.air_pods, name="air_pods"),
+#     path('watches', views.watches, name="watches"),
+#     path('head_phones', views.head_phones, name="head_phones"),
+#     path('washing_machines', views.washing_machines, name="washing_machines"),
+#     path('monitors', views.monitors, name="monitors"),
+#    
+#     
+ #]
