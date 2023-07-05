@@ -42,7 +42,7 @@ def logout(request):
 @anonymous_required
 def login(request):
     context = {"Message": 'Successful'}
-    return render(request, 'authentication/login.html', context)
+    return render(request, 'login.html', context)
     
     
     
@@ -50,12 +50,12 @@ def login(request):
 @anonymous_required
 def register(request):
     context = {"Message": 'Successful'}
-    return render(request, 'authentication/register.html', context)
+    return render(request, 'register.html', context)
 
 @login_required
 def dashboard(request):
     context = {"Message": 'Successful'}
-    return render(request, 'authentication/dashboard.html', context)
+    return render(request, 'dashboard.html', context)
 
 
 def home(request):
@@ -74,9 +74,9 @@ def home(request):
         else:
             # Authentication failed, display an error message
             error_message = 'Invalid username or password.'
-            return render(request, 'authentication/register.html', {'error_message': error_message})
+            return render(request, 'register.html', {'error_message': error_message})
     
-    return render(request, 'authentication/login.html')
+    return render(request, 'login.html')
 
 def register(request):
     if request.method == 'POST':
@@ -86,5 +86,30 @@ def register(request):
             return redirect('login')  # Redirect to login page after successful registration
     else:
         form = UserCreationForm()
-    return render(request, 'authentication/register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
+
+def about(request):
+    return render(request, 'about.html')
+
+def product(request):
+    return render(request, 'product.html')
+def contact(request):
+    return render(request, 'contact.html')
+def phones(request):
+    return render(request, 'phones.html')
+def computers(request):
+    return render(request, 'computers.html')
+def conditioners(request):
+    return render(request, 'conditioners.html')
+def air_pods(request):
+    return render(request, air_pods.html)
+def watches(request):
+    return render(request, 'watches.html')
+def head_phones(request):
+    return render(request, 'head_phones.html')
+def washing_machines(request):
+    return render(request, 'washing_machines.html')
+def monitors(request):
+    return render(request, 'monitors.html')
+
 

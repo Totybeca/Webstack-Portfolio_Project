@@ -1,6 +1,9 @@
 /* Custom CSS for the template */
 
 /* Main styles for the form */
+body {
+  background-image: url("/app/img/bg.jpg");
+}
 .form-signin {
     max-width: 330px;
     padding: 15px;
