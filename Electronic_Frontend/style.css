@@ -702,42 +702,47 @@ html{
 
 
 /* Contact start */
-#contact{
-    margin-top: 50px;
+#contact {
+  margin-top: 50px;
 }
-#contact .card{
-    height: 80px;
-    margin-top: 20px;
-    box-shadow: rgba(100, 100, 111 ,0.2) 0px 7px 29px 0px;
+
+.card {
+  height: 80px;
+  margin-top: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-#contact .card i{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 15px;
-    color: rgb(21 0 86);
-    font-weight: bolder;
-    letter-spacing: 3px;
+
+.card i {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: rgb(21, 0, 86);
+  font-weight: bolder;
+  letter-spacing: 3px;
 }
-#contact .card h6{
-    margin-left: 10px;
-    margin-top: 10px;
-    letter-spacing: 3px;
-    font-weight: bold;
-    color: rgb(21 0 86);
+
+.card h6 {
+  margin-left: 10px;
+  margin-top: 10px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: rgb(21, 0, 86);
 }
-.messagebtn button{
-    margin-top: 30px;
-    width: 200px;
-    height: 33px;
-    background: transparent;
-    border: 2px solid rgb(21 0 86);
-    font-weight: bolder;
-    letter-spacing: 3px;
-    transition: 0.5s ease;
-    cursor: pointer;
+
+.messagebtn button {
+  margin-top: 30px;
+  width: 200px;
+  height: 33px;
+  background: transparent;
+  border: 2px solid rgb(21, 0, 86);
+  font-weight: bolder;
+  letter-spacing: 3px;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
-.messagebtn button:hover{
-    background-color:#000080;
-    color: white;
+
+.messagebtn button:hover {
+  background-color: #000080;
+  color: white;
 }
 /* Contact end */
