@@ -3,14 +3,20 @@ from . import views
 
 
 urlpatterns = [
-    path('register', views.register, name="register"),
-    # path('base', views.base, name="base"),
-    # path('about', views.about, name="about_us"),
-    # path('contact', views.contact, name="contact_us"),
-    # path('product', views.product, name="our_product"),
+    path('', views.register, name="register"),
+    #path('base', views.base, name="base"),
+    path('', views.about, name="about"),
+    path('', views.contact, name="contact"),
+    path('', views.product, name="product"),
     # path('categories', views.categories, name="all_categories"),
-    path('login', views.login, name="login"),
-    path('dashboard', views.dashboard, name="dashboard"),
-    path('', views.home, name="home")
-   
+    path('', views.login, name="login"),
+    path('', views.dashboard, name="dashboard"),
+    path('', views.phones, name="phones"),
+    path('', views.computers, name="computers"),
+    path('', views.conditioners, name="conditioners"),
+    path('', views.air_pods, name="air_pods"),
+    path('', views.watches, name="watches"),
+    path('', views.head_phones, name="head_phones"),
+    path('', views.washing_machines, name="washing_machines"),
+    path('', views.monitors, name="monitors"),
 ]
