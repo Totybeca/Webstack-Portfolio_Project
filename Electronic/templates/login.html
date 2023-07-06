@@ -2,81 +2,9 @@
 {% load static %}
 {% block content %}
 
-<body>
-  <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
-        <div class="row flex-grow">
-          <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <div class="auth-form-transparent text-left p-3">
-              <div class="brand-logo">
-                <a class="navbar-brand" href="{% url 'dashboard' %}" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
-                <h4>Welcome Back </h4>
-                <h6 class="font-weight-light">Happy to see you again!</h6>
-
-                <form method="POST" class="pt-3">
-                  {% csrf_token %}
-                  <div class="form-group">
-                    <label for="exampleInputUserName">Username</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend bg-transparent">
-                        <span class="input-group-text bg-transparent border-right-0">
-                          <i class="mdi mdi-account-outline text-primary"></i>
-                        </span>
-                      </div>
-                      <input type="text" class="form-control form-control-lg border-left-0" id="exampleInputUserName" placeholder="Username">Username</input>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPasswordName">Password</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend bg-transparent">
-                        <span class="input-group-text bg-transparent border-right-0">
-                          <i class="mdi mdi-account-outline text-primary"></i>
-                        </span>
-                      </div>
-                      <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPasswordName" placeholder="Password">Password</input>
-                    </div>
-                  </div>
-
-                  <div class="my-2 d-flex justify-content-between align-items-center">
-                    <div class="form-check">
-                      <label class="form-check-lael text-muted">
-                        <input type="checkbox" class="form-check-input">
-                        Keep me signed in
-                        </label>
-                      </div>
-                      <a href="#" class="auth-link text-black">Forgot Password</a>
-                    </div>
-
-                    <div class="my-3">
-                      <a href="{% url 'dashboard' %}" class="btnbtn-block btn-primary btn-lg font-weight-medium auth-font-btn">LOGIN</a>
-
-                    <div class="my-2 d-flex">
-                      <button type="button" class="btn btn-facebook auth-form-btn flex-grow mr-1">
-                        <i class="mdi mdi-facebook mr-2"></i>Facebook
-                      </button>
-
-                      <div class="my-2 d-flex">
-                        <button type="button" class="btn btn-google auth-form-btn flex-grow ml-1">
-                          <i class="mdi mdi-google mr-2"></i>Google
-                        </button>
-                      </div>
-
-                      <div class="text-center mt-4 font-weight-light">
-                        Don't have an account? <a href="{% url 'register' %}" class="text-primary">Create</a>
-                      </div>
-                    </form>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-6 login-half-bg d-flex flex-row">
-                    <p class="text-white font-weight-medium text-color flex-grow align-self-end">Copyright &copy; <strong><span>ELECTROMART</span></strong></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </body>
-        </html>
-        {% endblock %}
+<form method="POST" action="{% url 'login' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

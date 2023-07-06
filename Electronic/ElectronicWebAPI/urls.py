@@ -10,10 +10,12 @@ urlpatterns = [
     #path('base', views.base, name="base"),
     path('about', views.about, name="about"),
     path('contact', views.contact, name="contact"),
+    path('send_email', views.send_email, name="send_email"),
     path('services',views.services, name="services"),
     path('terms', views.terms, name="terms"),
     path('privacy', views.privacy, name="privacy"),
     path('_header', views._header, name="_header"),
+    path('search/', views.search, name='search'),
    
 ]
      
