@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electronic store</title>
+    <title> <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--boostrap links-->
@@ -14,182 +14,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <!--fonts link-->
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+    <style>
+        body {
+  font-family: sans-serif;
 }
 
-html{
-  height: 100%;
-}
-body{
-  margin: 0;
-  padding: 0;
-  background-image: url(https://onaircode.com/wp-content/uploads/2019/09/background-wave-1024x575.jpg);
-  background-size: cover;
-.login{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: transparent;
-  box-sizing: border-box;
-  border-bottom: 1.50px solid #0fe32e;
-  border-radius: 10px;
-  
-}
-.login h2{
-  margin: 0 0 30px;
-  padding: 0;
-  color: #eef4f4;
+h1 {
   text-align: center;
 }
-.login .user-box{
-  position: relative;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.login .user-box input{
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #2196F3;
   color: white;
-  margin-bottom: 30px;
+  padding: 10px 20px;
   border: none;
-  border-bottom: 1px solid #03e9f4;
-  outline: none;
-  background: transparent;
-}
-.login .user-box label{
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  color: #eff5f6;
-  pointer-events: none;
-  font-size: 16px;
-  transition: 0.5s;
-}
-.login .user-box input:focus ~ label,
-.login .user-box input:valid ~ label{
-  top: -20px;
-  left: 0;
-  color: #eaf2f2;
-  font-size: 12px;
-}
-.login p{
-  color: rgb(216, 239, 6);
   cursor: pointer;
 }
-.login p span{
-  color: #d6dada;
-  float: right;
-}
-.login form a{
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #ecf4f4;
-  font-size: 20px;
-  text-decoration: none;
-  text-transform: lowercase;
-  overflow: hidden;
-  transition: 0.5s;
-  margin-top: 40px;
-  letter-spacing: 4px;
-}
-.login a:hover{
-  background: #2e08a3;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #4804a9,
-              0 0 25px #4602d9,
-              0 0 50px #4604de,
-              0 0 100px #4502e3;
-}
-.login a span{
-  position: absolute;
-  display: block;
-}
-.login a span:nth-child(1){
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn 1min circular infinite;
-}
-@keyframes animatedbtn1{
-  0%{
-    left: -100%;
-  }
-  50%,100%{
-    left: 100%;
-  }
-}
-.login a span:nth-child(2){
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 50%;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn2 1s linear infinite;
-  animation-delay: .15s;
-}
-@keyframes animatedbtn2{
-  0%{
-    top: -100%;
-  }
-  50%,100%{
-    top: 100%;
-  }
+
+#cartItems {
+  margin-top: 20px;
 }
 
-.login a span:nth-child(3){
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn3 1s linear infinite;
-  animation-delay: .5s;
-}
-@keyframes animatedbtn3{
-  0%{
-    right: -100%;
-  }
-  50%,100%{
-    right: 100%;
-  }
+#cartItems li {
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
-.login a span:nth-child(4){
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn4 1s linear infinite;
-  animation-delay: .75s;
-}
-@keyframes animatedbtn4{
-  0%{
-    bottom: -100%;
-  }
-  50%,50%{
-    bottom: 50%;
-  }
-}
-@media screen and (max-width:1000px){
-  .login{
-    width: 90%;
-  }
-}
-</style>
+    </style>
 </head>
 <body>
-<!--Navigation bar at the top-->
+!--Navigation bar at the top-->
 <div class="top-navbar">
     <p>WELCOME TO TEAM SWIFT'S ELECTROMART</p>
     <div class="icons">
@@ -245,39 +109,24 @@ body{
     </div>
   </nav>
 <!--Navigation bar-->
+    <div>
+        <h1>Shopping Cart</h1>
 
+    <h2>Available Goods</h2>
+    <ul>
+        <li>Product 1 <button onclick="addToCart('Product 1')">Add to Cart</button></li>
+        <li>Product 2 <button onclick="addToCart('Product 2')">Add to Cart</button></li>
+        <li>Product 3 <button onclick="addToCart('Product 3')">Add to Cart</button></li>
+    </ul>
 
+    <h2>Cart</h2>
+    <ul id="cartItems">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
 
+    <button onclick="checkout()">Checkout</button>
 
-
-
-
-
-<div class="container" id="login">
-  <div class="row">
-      <div class="col-md-5 py-3 py-md-0" id="side1">
-          <h3 class="text-center">LOG IN</h3>
-      </div>
-      <div class="col-md-7 py-3 py-md-0" id="side2">
-          <h3 class="text-center">log in</h3>
-          <div class="input2 text-center">
-          <input type="email" placeholder="Email">
-          <input type="password" placeholder="Password">
-          </div>
-          <p class="text-center" id="btnlogin"><a href="#">LOG IN</a></p>
-      </div>
-
-      <p><input type="checkbox">Remember me <span>forgot password?<span></p>
-      <div>
-      	<a href="#">Login</a>
-        <a href="register.html" style="margin: 20px;" target="blank">signup</a>
-      </div>
-    </form>
-
-  </div>
- </div>
-
-
+    </div>
  <!-- footer -->
 <footer id="footer">
   <div class="footer-top">
@@ -309,7 +158,7 @@ body{
 
 
 
-       
+
 
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Our Services</h4>
@@ -334,7 +183,7 @@ body{
             <a href="#"><i class="fa-brands fa-skype"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
           </div>
-        
+
         </div>
 
       </div>
@@ -357,10 +206,40 @@ body{
 
 
 
+
+    <script>
+        var cartItems = [];
+
+        function addToCart(item) {
+            cartItems.push(item);
+            updateCart();
+            console.log(item + " added to the cart.");
+        }
+
+        function updateCart() {
+            var cartList = document.getElementById("cartItems");
+            cartList.innerHTML = "";
+            cartItems.forEach(function(item) {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(item));
+                cartList.appendChild(li);
+            });
+        }
+
+        function checkout() {
+            if (cartItems.length > 0) {
+                console.log("Checking out...");
+                console.log("Cart items:");
+                cartItems.forEach(function(item) {
+                    console.log("- " + item);
+                });
+                console.log("Thank you for shopping!");
+                cartItems = [];
+                updateCart();
+            } else {
+                console.log("Cart is empty. Add items before checking out.");
+            }
+        }
+    </script>
 </body>
-<<<<<<< HEAD
->>>>>>> ab916bb12da7fe1c39b9a9cd5ef4b324bbf395a5:login.html
 </html>
-=======
-</html>
->>>>>>> 9ab754759ef7fae56ce74ba365a69477aa61d6b9

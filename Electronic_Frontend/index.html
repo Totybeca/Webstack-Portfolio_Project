@@ -659,7 +659,80 @@ Fix html here
       </div>
     </div>
     <!-- Newsletter end-->
+  <__Cart start__>
+    <div>
+      class Cart:
+    def __init__(self):
+        self.items = []
 
+    def add_item(self, item):
+        self.items.append(item)
+        print(f"Added {item} to the cart.")
+
+    def remove_item(self, item):
+        if item in self.items:
+            self.items.remove(item)
+            print(f"Removed {item} from the cart.")
+        else:
+            print(f"{item} is not in the cart.")
+
+    def view_cart(self):
+        if self.items:
+            print("Cart items:")
+            for item in self.items:
+                print(f"- {item}")
+        else:
+            print("Cart is empty.")
+
+    def checkout(self):
+        total = 0
+        if self.items:
+            print("Checking out...")
+            print("Cart items:")
+            for item in self.items:
+                print(f"- {item}")
+                # Add logic here to calculate total price based on item prices or quantities
+                # total += item.price
+            print(f"Total: ${total}")
+            print("Thank you for shopping!")
+            self.items = []
+        else:
+            print("Cart is empty. Add items before checking out.")
+
+
+# Example usage:
+cart = Cart()
+
+cart.view_cart()  # Cart is empty.
+
+cart.add_item("Apple")
+cart.add_item("Banana")
+cart.add_item("Orange")
+
+cart.view_cart()
+# Cart items:
+# - Apple
+# - Banana
+# - Orange
+
+cart.remove_item("Banana")
+
+cart.view_cart()
+# Cart items:
+# - Apple
+# - Orange
+
+cart.checkout()
+# Checking out...
+# Cart items:
+# - Apple
+# - Orange
+# Total: $0
+# Thank you for shopping!
+
+cart.view_cart()  # Cart is empty.
+
+    </div>
 
 
 
