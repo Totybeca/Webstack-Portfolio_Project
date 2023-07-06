@@ -1,8 +1,52 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
-    Child Template Title
-{% endblock %}
+{% extends 'base.html' %} 
+{% load static %} 
 
 {% block content %}
-    <h2>Child Template Content</h2>
-    <p>This is the content of the child template.</p>
+<section>
+  <article>
+    <h1>Contact Us</h1>
+    <body>
+        <div class="container" id="contact">
+          <div class="row" style="margin-top: 50px;">
+            <div class="col-md-4 py-3 py-md-0">
+              <div class="card">
+                <i class="fas fa-phone"></i>
+                <h6>+2346950960760</h6>
+              </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+              <div class="card">
+                <i class="fas fa-envelope"></i>
+                <h6>teamswift@gmail.com</h6>
+              </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+              <div class="card">
+                <i class="fas fa-location-dot"></i>
+                <h6>Lagos, Nigeria</h6>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4 py-3 py-md-0">
+              <input type="text" class="form-control form-control" placeholder="Name">
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+              <input type="text" class="form-control form-control" placeholder="Email">
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+              <input type="text" class="form-control form-control" placeholder="Phone">
+            </div>
+            <div class="form-group" style="margin-top: 30px;">
+              <textarea class="form-control" id="" rows="5" placeholder="Message"></textarea>
+            </div>
+            <div class="messagebtn text-center">
+              <button>Message</button>
+            </div>
+          </div>
+        </div>
+        </body>
+      </article>
+    </section>
+        
 {% endblock %}

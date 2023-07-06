@@ -13,6 +13,7 @@ urlpatterns = [
     path('services',views.services, name="services"),
     path('terms', views.terms, name="terms"),
     path('privacy', views.privacy, name="privacy"),
+    path('_header', views._header, name="_header"),
    
 ]
      
@@ -20,7 +21,6 @@ urlpatterns = [
 #     
 #    
      
-#     # path('categories', views.categories, name="all_categories"),
     #path('phones', views.phones, name="phones"),
 #     path('computers', views.computers, name="computers"),
 #     path('conditioners', views.conditioners, name="conditioners"),

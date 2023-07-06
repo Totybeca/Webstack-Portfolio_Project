@@ -63,6 +63,22 @@ def product(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def _header(request):
+    dropdown_items = [
+        "Mobile phones",
+        "Computers",
+        "Air Conditioners",
+        "AirPods",
+        "Smart Watches",
+        "Headphones",
+        "Washing Machines",
+        "PC Monitors",
+    ]
+    context = {'dropdown_items': dropdown_items}
+    return render(request, 'partials/_header.html', context)
+
+
+
 
 # def phones(request):
 #     return render(request, 'phones.html')

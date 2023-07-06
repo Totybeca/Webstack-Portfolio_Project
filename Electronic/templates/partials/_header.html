@@ -47,15 +47,11 @@
                             All Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67, 0, 86);">
-                            <li><a class="dropdown-item" href="#" target="_blank">Mobile phones</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">Computers</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">Air Conditioners</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">AirPods</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">Smart Watches</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">Headphones</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">Washing Machines</a></li>
-                            <li><a class="dropdown-item" href="#" target="_blank">PC Monitors</a></li>
+                            {% for item in dropdown_items %}
+                                <li><a class="dropdown-item" href="#" target="_blank">{{ item }}</a></li>
+                            {% endfor %}
                         </ul>
+                        
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}" target="_blank">About Us</a>
