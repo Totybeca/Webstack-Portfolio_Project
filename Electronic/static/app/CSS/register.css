@@ -1,0 +1,42 @@
+/* Custom CSS for the template */
+
+/* Main styles for the form */
+body {
+  background-image: url("/app/img/bg.jpg");
+}
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  
+  .form-signin .form-floating {
+    margin-bottom: 10px;
+  }
+  
+  .form-signup .btn-primary {
+    margin-top: 10px;
+  }
+  
+  /* Styles for the footer section */
+  #footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+  }
+  
+  #footer .footer-contact {
+    font-size: 14px;
+  }
+  
+  #footer .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  #footer .footer-links a {
+    color: #6c757d;
+  }
+  
+  #footer .social-links a {
+    margin-right: 5px;
+    color: #6c757d;
+  }
