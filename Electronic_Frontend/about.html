@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width="100%", initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/static/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <!--boostrap links-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -42,6 +42,7 @@ html {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
   margin: 15px;
   width: 300px;
+  height: 100px;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-left: auto;
@@ -228,23 +229,27 @@ margin-bottom: 6px;
 <div class="top-navbar">
   <p>WELCOME TO TEAM SWIFT SHOP</p>
   <div class="icons">
-      <a href="login.html" target="blank"><i class="fa fa-sign-in" aria-hidden="true"></i></i>Login</a>
-      <a href="register.html" style="margin: 20px;" target="blank"><i class="fa fa-sign-in" aria-hidden="true"></i></i>Register</a>
-  </div>
+		   {% if session.fullname %}
+			   Welcome {{ session.fullname }} <button type="button" onClick="if(confirm('Logout Now')) window.location = '/logout';" class="btn btn-secondary btn-sm" style="margin-right: 20px;">logout</button>.
+			{% else %}
+				<a href="/login"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Login</a>
+				<a href="/register" style="margin: 20px;"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Register</a>
+			{% endif %}
+		</div>
 </div>
 <!--top navbar-->
 
 <!--Navigation bar-->
 <nav class="navbar navbar-expand-lg" id="navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
+    <a class="navbar-brand" href="/" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span><img src="./images/menu.png" alt="" width="30px"></span>
+      <span><img src="/static/images/menu.png" alt="" width="30px"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Our Products</a>
@@ -265,10 +270,10 @@ margin-bottom: 6px;
           </ul>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="about.html" target="blank">About Us</a>
+              <a class="nav-link" href="/about">About Us</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="contact.html" target="blank">Contact Us</a>
+              <a class="nav-link" href="/contact">Contact Us</a>
             </li>
           </ul>
 
@@ -305,12 +310,12 @@ margin-bottom: 6px;
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="./images/Emerald.jpg" alt="Emerald" width="150" height="150">
+      <img src="/static/images/Emerald.jpg" alt="Emerald" width="150" height="150">
       <div class="container">
-        <h2 class="text-center">Emerald</h2>
-        <p class="title">Front-end Developer</p>
-        <p>Med Educational Management<br>
-          Skills: HTML, CSS, Javascript.</p>
+        <h2 class="text-center">Toyin</h2>
+        <p class="title">Front-End Engineer</p>
+        <p>Excellent problem-solving skills<br>
+          I am very persistent and detailed oriented. I am self driven, growth seeking and always willing to learn!</p>
     </div>
       
     </div>
@@ -318,7 +323,7 @@ margin-bottom: 6px;
   </div>
   <div class="column">
     <div class="card">
-      <img src="./images/james1.jpg" alt="James" width="150" height="150">
+      <img src="/static/images/james1.jpg" alt="James" width="150" height="150">
       <div class="container">
         <h2>James</h2>
         <p class="title">Backend Developer</p>
@@ -330,7 +335,7 @@ margin-bottom: 6px;
   
   <div class="column">
     <div class="card">
-      <img src="./images/Light.jpg" alt="Light" width="150" height="150">
+      <img src="/static/images/Light.jpg" alt="Light" width="150" height="150">
       <div class="container">
         <h2>Light</h2>
         <p class="title">Front-End Designer</p>
@@ -342,10 +347,10 @@ margin-bottom: 6px;
   
     <div class="column">
       <div class="card">
-        <img src="./images/Bode.jpg" alt="Bode" width="150" height="150">
+        <img src="/static/images/Bode.jpg" alt="Bode" width="150" height="150">
         <div class="container">
           <h2>Bode</h2>
-          <p class="title">Front-End Designer</p>
+          <p class="title">Backend Developer</p>
           <p>An Engineer with sound technical, problem-solving, and creative skill passionate in the world impactiong</p>
       </div>
         
