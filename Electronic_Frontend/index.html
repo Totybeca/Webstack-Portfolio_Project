@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELECTROMART</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--boostrap links-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -24,22 +24,27 @@
 <header>
 <div class="top-navbar">
     <p>WELCOME TO TEAM SWIFT'S ELECTROMART</p>
-    <div class="icons">
-        <a href="login.html" target="blank"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Login</a>
-        <a href="register.html" style="margin: 20px;" target="blank"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Register</a>
-    </div>
+       <div class="icons">
+		   {% if session.fullname %}
+			   Welcome {{ session.fullname }} <button type="button" onClick="if(confirm('Logout Now')) window.location = '/logout';" class="btn btn-secondary btn-sm" style="margin-right: 20px;">logout</button>.
+			{% else %}
+				<a href="/login"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Login</a>
+				<a href="/register" style="margin: 20px;"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Register</a>
+			{% endif %}
+		</div>
+    
 </div>
 
 <nav class="navbar navbar-expand-lg" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
+      <a class="navbar-brand" href="/" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span><img src="./images/menu.png" alt="" width="30px"></span>
+        <span><img src="/static/images/menu.png" alt="" width="30px"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Our Products</a>
@@ -60,10 +65,10 @@
             </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html" target="blank">About Us</a>
+                <a class="nav-link" href="/about">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html" target="blank">Contact Us</a>
+                <a class="nav-link" href="/contact">Contact Us</a>
               </li>
             </ul>
 
@@ -82,20 +87,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-
-
-{
-  fix css here
-}
-
-    </style>
-</head>
-<body>
-Fix html here
-
-</body>
-
+    
 
 <!--Content start-->
 <section class="home">
@@ -110,7 +102,7 @@ Fix html here
   <div class="btn" ><button>Shop Now!</button></div>
   </div>
 <div class="img">
-  <img src="./images/background.jpg" alt="">
+  <img src="/static/images/background.jpg" alt="">
 </div>
 </section> 
 <!--Content end -->
@@ -128,7 +120,7 @@ Fix html here
 <div class="row" style="margin-top: 30px;">
 <div class="col-md-3 py-3 py-md-0">
 <div class="card">
-  <img src="./images/iphone.png" alt="">
+  <img src="/static/images/iphone.png" alt="">
   <div clas="card-body">
     <h3 class="text-center">Iphone 14 pro</h3>
     <p class="text-center">iPhone 14 Pro - 256GB
@@ -146,7 +138,7 @@ Fix html here
 </div>
 <div class="col-md-3 py-3 py-md-0">
   <div class="card">
-    <img src="./images/mac.jpg" alt="" style="height: 273px;">
+    <img src="/static/images/mac.jpg" alt="" style="height: 273px;">
     <div clas="card-body">
       <h3 class="text-center">MacBook Pro</h3>
       <p class="text-center">With Apple M1 Chip - 13
@@ -164,7 +156,7 @@ Fix html here
   </div>
   <div class="col-md-3 py-3 py-md-0">
     <div class="card">
-      <img src="./images/airpod.png" alt="" style="height: 273px;">
+      <img src="/static/images/airpod.png" alt="" style="height: 273px;">
       <div clas="card-body">
         <h3 class="text-center">Airpod</h3>
         <p class="text-center">Airpod pro wireless
@@ -182,7 +174,7 @@ Fix html here
     </div>
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
-        <img src="./images/ipad.png" alt="" style="height: 273px;">
+        <img src="/static/images/ipad.png" alt="" style="height: 273px;">
         <div clas="card-body">
           <h3 class="text-center">Ipad 5</h3>
           <p class="text-center">Wifi+SIM, 9.7 Inches, 128GB ROM
@@ -203,7 +195,7 @@ Fix html here
 <div class="row" style="margin-top: 30px;">
   <div class="col-md-3 py-3 py-md-0">
   <div class="card">
-    <img src="./images/wristwatch.png" alt="" style="height: 300px;">
+    <img src="/static/images/wristwatch.png" alt="" style="height: 300px;">
     <div clas="card-body">
       <h3 class="text-center">Gold Wristwatch</h3>
       <p class="text-center">Luxury gold full metal wristwatch
@@ -221,7 +213,7 @@ Fix html here
   </div>
   <div class="col-md-3 py-3 py-md-0">
     <div class="card">
-      <img src="./images/monitor.png" alt="" style="height: 300px;">
+      <img src="/static/images/monitor.png" alt="" style="height: 300px;">
       <div clas="card-body">
         <h3 class="text-center">Computer Monitor</h3>
         <p class="text-center">Hp M22f (21.5" ) FHD IPS Monitor 
@@ -239,7 +231,7 @@ Fix html here
     </div>
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
-        <img src="./images/android.png" alt="" style="height: 300px;">
+        <img src="/static/images/android.png" alt="" style="height: 300px;">
         <div clas="card-body">
           <h3 class="text-center">Oppo Phone </h3>
           <p class="text-center">A series smartphones
@@ -257,7 +249,7 @@ Fix html here
       </div>
       <div class="col-md-3 py-3 py-md-0">
         <div class="card">
-          <img src="./images/head.jpg" alt="" style="height: 282px;">
+          <img src="/static/images/head.jpg" alt="" style="height: 282px;">
           <div clas="card-body">
             <h3 class="text-center">Mic Headphone</h3>
             <p class="text-center"> Microphone Compatible With Razer- Black Shark.
@@ -286,7 +278,7 @@ Fix html here
   <div class="row">
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
-        <img src="./images/laptop2.jpg" alt="">
+        <img src="/static/images/laptop2.jpg" alt="">
         
           <h3> Best HP Laptop</h3>
           <h5>Latest Version</h5>
@@ -297,7 +289,7 @@ Fix html here
     
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
-        <img src="./images/head2.jpg" alt="">
+        <img src="/static/images/head2.jpg" alt="">
         
           <h3>Best Headphone</h3>
           <h5>Latest Version</h5>
@@ -307,7 +299,7 @@ Fix html here
 </div>
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
-        <img src="./images/iphone.png" alt="">
+        <img src="/static/images/iphone.png" alt="">
         <h3>Best iphone Pro Max</h3>
           <h5>Latest Collection</h5>
           <p>Up To 10% Off</p>
@@ -317,7 +309,7 @@ Fix html here
     
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
-        <img src="./images/ipad.jpg" alt="">
+        <img src="/static/images/ipad.jpg" alt="">
         <h3>Best Apple Ipad Air</h3>
           <h5>Latest Version</h5>
           <p>Up To 10% Off</p>
@@ -345,7 +337,7 @@ Fix html here
         <div class="btn"><button>Shop Now</button></div>
   </div>
       <div class="img">
-        <img src="./images/kitchen9.jpg" alt="" style="height: 400px; margin-top: 0px; margin-bottom: none;">
+        <img src="/static/images/kitchen9.jpg" alt="" style="height: 400px; margin-top: 0px; margin-bottom: none;">
       </div>
     </section>
     <!--Banner end-->
@@ -359,7 +351,7 @@ Fix html here
       <div class="row" style="margin-top: 30px;">
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/kitchen9.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/kitchen9.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Home Appliances</h3>
               <p class="text-center">Makes life easy.</p>
@@ -376,7 +368,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/airfryer.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/airfryer.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Airfryer</h3>
               <p class="text-center">Small appliance for your kitchen</p>
@@ -393,7 +385,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/toaster.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/toaster.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Toaster</h3>
               <p class="text-center">Toast and toss .</p>
@@ -410,7 +402,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/aircon.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/aircon.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Airconditioner</h3>
               <p class="text-center">Best cooling effect</p>
@@ -437,7 +429,7 @@ Fix html here
       <div class="row">
         <div class="col-md-4 py-3 py-md-0">
           <div class="card">
-            <img src="./images/electro.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/electro.jpg" alt="" style="height: 200px;">
             <div class="card-img-overlay">
               <h3>Electronic Gadgets</h3>
               <p>Latest Versions Up To 10% Off</p>
@@ -446,7 +438,7 @@ Fix html here
         </div>
         <div class="col-md-4 py-3 py-md-0">
           <div class="card">
-            <img src="./images/gaming.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/gaming.jpg" alt="" style="height: 200px;">
             <div class="card-img-overlay">
               <h3>Gaming Gadgets</h3>
               <p>Latest Versions  Up To 10% Off</p>
@@ -455,7 +447,7 @@ Fix html here
         </div>
         <div class="col-md-4 py-3 py-md-0">
           <div class="card">
-            <img src="./images/home2.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/home2.jpg" alt="" style="height: 200px;">
             <div class="card-img-overlay">
               <h3>Home Gadgets</h3>
               <p>Latest Versions Up To 10% Off</p>
@@ -472,7 +464,7 @@ Fix html here
       <div class="row" style="margin-top: 30px;">
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/home.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/home.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Home Theatre</h3>
               <p class="text-center">Hisense Sound</p>
@@ -489,7 +481,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/tv.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/tv.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Television</h3>
               <p class="text-center">Smart Television.</p>
@@ -506,7 +498,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/fan.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/fan.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Fan</h3>
               <p class="text-center">Rechargeable table fan</p>
@@ -523,7 +515,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/wireless.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/wireless.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Table Phone</h3>
               <p class="text-center">wireless Intercom.</p>
@@ -543,7 +535,7 @@ Fix html here
       <div class="row" style="margin-top: 30px;">
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/cylinder.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/cylinder.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Gas Cylinder</h3>
               <p class="text-center">12kg Light Weighted.</p>
@@ -560,7 +552,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/gas.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/gas.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Gas Cooker</h3>
               <p class="text-center">4 Burner Gas Cooker.</p>
@@ -577,7 +569,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/washing.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/washing.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Washing Machine</h3>
               <p class="text-center">Midea Washing Machine.</p>
@@ -594,7 +586,7 @@ Fix html here
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./images/kitchen.jpg" alt="" style="height: 200px;">
+            <img src="/static/images/kitchen.jpg" alt="" style="height: 200px;">
             <div class="card-body">
               <h3 class="text-center">Kitchen Gadgets</h3>
               <p class="text-center">Kitchen Glory.</p>
@@ -659,80 +651,7 @@ Fix html here
       </div>
     </div>
     <!-- Newsletter end-->
-  <__Cart start__>
-    <div>
-      class Cart:
-    def __init__(self):
-        self.items = []
 
-    def add_item(self, item):
-        self.items.append(item)
-        print(f"Added {item} to the cart.")
-
-    def remove_item(self, item):
-        if item in self.items:
-            self.items.remove(item)
-            print(f"Removed {item} from the cart.")
-        else:
-            print(f"{item} is not in the cart.")
-
-    def view_cart(self):
-        if self.items:
-            print("Cart items:")
-            for item in self.items:
-                print(f"- {item}")
-        else:
-            print("Cart is empty.")
-
-    def checkout(self):
-        total = 0
-        if self.items:
-            print("Checking out...")
-            print("Cart items:")
-            for item in self.items:
-                print(f"- {item}")
-                # Add logic here to calculate total price based on item prices or quantities
-                # total += item.price
-            print(f"Total: ${total}")
-            print("Thank you for shopping!")
-            self.items = []
-        else:
-            print("Cart is empty. Add items before checking out.")
-
-
-# Example usage:
-cart = Cart()
-
-cart.view_cart()  # Cart is empty.
-
-cart.add_item("Apple")
-cart.add_item("Banana")
-cart.add_item("Orange")
-
-cart.view_cart()
-# Cart items:
-# - Apple
-# - Banana
-# - Orange
-
-cart.remove_item("Banana")
-
-cart.view_cart()
-# Cart items:
-# - Apple
-# - Orange
-
-cart.checkout()
-# Checking out...
-# Cart items:
-# - Apple
-# - Orange
-# Total: $0
-# Thank you for shopping!
-
-cart.view_cart()  # Cart is empty.
-
-    </div>
 
 
 
@@ -805,7 +724,8 @@ cart.view_cart()  # Cart is empty.
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     
    
+    </body>
      <!-- Back to Top -->
-    <a href="#" class="arrow"><i class='fas fa-arrow-alt-circle-left' style='font-size:48px;color:red'></i>
-</body>
+     <a href="#" class="arrow"><i class='fas fa-arrow-alt-circle-up' style='font-size:48px;color:red'></i>
+
 </html>
