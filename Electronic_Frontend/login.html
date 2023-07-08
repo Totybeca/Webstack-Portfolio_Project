@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronic store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--boostrap links-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,202 +14,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <!--fonts link-->
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-html{
-  height: 100%;
-}
-body{
-  margin: 0;
-  padding: 0;
-  background-image: url(https://onaircode.com/wp-content/uploads/2019/09/background-wave-1024x575.jpg);
-  background-size: cover;
-.login{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: transparent;
-  box-sizing: border-box;
-  border-bottom: 1.50px solid #0fe32e;
-  border-radius: 10px;
-  
-}
-.login h2{
-  margin: 0 0 30px;
-  padding: 0;
-  color: #eef4f4;
-  text-align: center;
-}
-.login .user-box{
-  position: relative;
-}
-.login .user-box input{
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: white;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #03e9f4;
-  outline: none;
-  background: transparent;
-}
-.login .user-box label{
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  color: #eff5f6;
-  pointer-events: none;
-  font-size: 16px;
-  transition: 0.5s;
-}
-.login .user-box input:focus ~ label,
-.login .user-box input:valid ~ label{
-  top: -20px;
-  left: 0;
-  color: #eaf2f2;
-  font-size: 12px;
-}
-.login p{
-  color: rgb(216, 239, 6);
-  cursor: pointer;
-}
-.login p span{
-  color: #d6dada;
-  float: right;
-}
-.login form a{
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #ecf4f4;
-  font-size: 20px;
-  text-decoration: none;
-  text-transform: lowercase;
-  overflow: hidden;
-  transition: 0.5s;
-  margin-top: 40px;
-  letter-spacing: 4px;
-}
-.login a:hover{
-  background: #2e08a3;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #4804a9,
-              0 0 25px #4602d9,
-              0 0 50px #4604de,
-              0 0 100px #4502e3;
-}
-.login a span{
-  position: absolute;
-  display: block;
-}
-.login a span:nth-child(1){
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn 1min circular infinite;
-}
-@keyframes animatedbtn1{
-  0%{
-    left: -100%;
-  }
-  50%,100%{
-    left: 100%;
-  }
-}
-.login a span:nth-child(2){
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 50%;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn2 1s linear infinite;
-  animation-delay: .15s;
-}
-@keyframes animatedbtn2{
-  0%{
-    top: -100%;
-  }
-  50%,100%{
-    top: 100%;
-  }
-}
-
-.login a span:nth-child(3){
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn3 1s linear infinite;
-  animation-delay: .5s;
-}
-@keyframes animatedbtn3{
-  0%{
-    right: -100%;
-  }
-  50%,100%{
-    right: 100%;
-  }
-}
-
-.login a span:nth-child(4){
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animatedbtn4 1s linear infinite;
-  animation-delay: .75s;
-}
-@keyframes animatedbtn4{
-  0%{
-    bottom: -100%;
-  }
-  50%,50%{
-    bottom: 50%;
-  }
-}
-@media screen and (max-width:1000px){
-  .login{
-    width: 90%;
-  }
-}
-</style>
 </head>
 <body>
 <!--Navigation bar at the top-->
 <div class="top-navbar">
     <p>WELCOME TO TEAM SWIFT'S ELECTROMART</p>
     <div class="icons">
-        <a href="login.html" target="blank"><i class="fa fa-sign-in" aria-hidden="true"></i></i>Login</a>
-        <a href="register.html" style="margin: 20px;" target="blank"><i class="fa fa-sign-in" aria-hidden="true"></i></i>Register</a>
-    </div>
+		   {% if session.fullname %}
+			   Welcome {{ session.fullname }} <button type="button" onClick="if(confirm('Logout Now')) window.location = '/logout';" class="btn btn-secondary btn-sm" style="margin-right: 20px;">logout</button>.
+			{% else %}
+				<a href="/login"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Login</a>
+				<a href="/register" style="margin: 20px;"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Register</a>
+			{% endif %}
+		</div>
 </div>
 <!--Navigation bar at the top-->
 
 <!--Navigation bar-->
 <nav class="navbar navbar-expand-lg" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
+      <a class="navbar-brand" href="/" id="logo"> <span id="span1">ELECTROMART</span> <span></span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span><img src="./images/menu.png" alt="" width="30px"></span>
+        <span><img src="/static/images/menu.png" alt="" width="30px"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Our Products</a>
@@ -230,10 +61,10 @@ body{
             </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.html" target="blank">About Us</a>
+                <a class="nav-link" href="/about">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html" target="blank">Contact Us</a>
+                <a class="nav-link" href="/contact">Contact Us</a>
               </li>
             </ul>
 
@@ -256,23 +87,23 @@ body{
 <div class="container" id="login">
   <div class="row">
       <div class="col-md-5 py-3 py-md-0" id="side1">
-          <h3 class="text-center">LOG IN</h3>
+          <h3 class="text-center">Login</h3>
       </div>
       <div class="col-md-7 py-3 py-md-0" id="side2">
-          <h3 class="text-center">log in</h3>
-          <div class="input2 text-center">
-          <input type="email" placeholder="Email">
-          <input type="password" placeholder="Password">
-          </div>
-          <p class="text-center" id="btnlogin"><a href="#">LOG IN</a></p>
+		  {%- for category, message in get_flashed_messages(with_categories = true) %}
+			 <div class="alert alert-info">
+				{{ message }}
+			 </div>
+		  {%- endfor %}
+		  <form action="/login" method="post">
+			  <h3 class="text-center">Create Account</h3>
+			  <div class="input2 text-center">
+				  <input class="dx-form" name="email" type="text" placeholder="Email" required>
+				  <input class="dx-form" name="password" type="password" placeholder="Password" required>
+			  </div>
+			  <p class="text-center" id="btnlogin"><button class="btn btn-danger" type="submit">LOGIN</button></p>
+		  </form>
       </div>
-
-      <p><input type="checkbox">Remember me <span>forgot password?<span></p>
-      <div>
-      	<a href="#">Login</a>
-        <a href="register.html" style="margin: 20px;" target="blank">signup</a>
-      </div>
-    </form>
 
   </div>
  </div>
@@ -358,9 +189,4 @@ body{
 
 
 </body>
-<<<<<<< HEAD
->>>>>>> ab916bb12da7fe1c39b9a9cd5ef4b324bbf395a5:login.html
 </html>
-=======
-</html>
->>>>>>> 9ab754759ef7fae56ce74ba365a69477aa61d6b9
