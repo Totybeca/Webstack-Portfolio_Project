@@ -688,15 +688,16 @@ html{
     .input2 input{
         width: 250px;
     }
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
 }
-@media screen and (max-width:765px){
-    .input2 input{
-        width: 260px;
-    }
-    #side2{
-        height: 60vh;
-    }
+.navbar {
+  position: fixed;
+  top: 0;
 }
+
 /* Login end */
 
 
