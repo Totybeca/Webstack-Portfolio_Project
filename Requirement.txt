@@ -1,7 +1,7 @@
 #The following dependency are needed for the code to runs swiftly on linux server
-virtualenv venv
+python3 -m pip install --user --upgrade pip
+python3 -m venv venv
 source venv/bin/activate
-pip install django
-django-admin --version
-pip install mysqlclient
-sudo apt install apache2
+pip install flask
+flask run
+
