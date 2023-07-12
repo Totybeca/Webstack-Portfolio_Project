@@ -34,9 +34,14 @@ def index():
 def about():
   return render_template('about.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET'])
 def contact():
-  return render_template('contact.html')
+  name = request.args.get('name')
+  email = request.args.get('email')
+  return f'Your name is {name} and your email is {email}.'
+
+if __name__ == '__main__':
+  app.run(debug=True)
 
 @app.route('/register', methods = ['GET'])
 def show_register_form():
