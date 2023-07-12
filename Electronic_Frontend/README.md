@@ -1,1 +1,0 @@
-This is a live web application done by Toyin Fashemore, Light Eyinnah and Bode Olaleye as the front-end engineers and Ikecukwu Nwamah as the back-end engineer. Please let it be known that it was done and successfully created by the mentioned persons.
