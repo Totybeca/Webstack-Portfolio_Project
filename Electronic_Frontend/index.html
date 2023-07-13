@@ -23,13 +23,14 @@
 <!--Header start-->
 <header>
 <div class="top-navbar">
-    <p>WELCOME TO TEAM SWIFT'S ELECTROMART</p>
+    <p class="smtop">WELCOME TO TEAM SWIFT'S ELECTROMART</p>
        <div class="icons">
 		   {% if session.fullname %}
 			   Welcome {{ session.fullname }} <button type="button" onClick="if(confirm('Logout Now')) window.location = '/logout';" class="btn btn-secondary btn-sm" style="margin-right: 20px;">logout</button>.
 			{% else %}
-				<a href="/login"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Login</a>
-				<a href="/register" style="margin: 20px;"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Register</a>
+				<a href="/login"><i class="fa-solid fa-pen-to-square" style="color: red;"></i><span class="dmtop">Login</span></a>
+				<a href="/register" style="margin-right:20px; margin-left: 10px;"><i class="fa-solid fa-pen-to-square" style="color: red;"></i>
+				<span class="dmtop">Register</span></a>
 			{% endif %}
 		</div>
     
@@ -46,12 +47,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Our Products</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              All Categories
+              Our Products
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
               <li><a class="dropdown-item" href="#" target="blank">Mobile phones</a></li>
@@ -97,9 +95,9 @@
       Sales! Sales! Sales! <br><span id="span2">10%</span>  Off
     </h1>
     <p>At Team swift's electronic mart, you are sure of the best.
-<br>Order now and get half price slashed!.
+<br>Order now and get 10% price slash!.
   </p>
-  <div class="btn" ><button>Shop Now!</button></div>
+  <div style="margin-left: 10px;"><a style="background-color: #000080;" class="btn btn-primary" href="/pay">Buy Now!</a></div>
   </div>
 <div class="img">
   <img src="/static/images/background.jpg" alt="">
@@ -120,7 +118,7 @@
 <div class="row" style="margin-top: 30px;">
 <div class="col-md-3 py-3 py-md-0">
 <div class="card">
-  <img src="/static/images/iphone.png" alt="">
+  <img src="/static/images/iphone.png" alt="" style="height: 273px;">
   <div clas="card-body">
     <h3 class="text-center">Iphone 14 pro</h3>
     <p class="text-center">iPhone 14 Pro - 256GB
@@ -132,7 +130,7 @@
   <i class="fa-solid fa-star checked"></i>
   <i class="fa-solid fa-star checked"></i>
 </div>
-<h2>₦1,019,000 <span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+<h2>₦1,019,000  <a style="float: right; text-decoration: none; color: black;" href="/pay">Buy Now</a></h2>
   </div>
 </div>
 </div>
@@ -150,7 +148,7 @@
     <i class="fa-solid fa-star checked"></i>
     <i class="fa-solid fa-star checked"></i>
   </div>
-  <h2>₦2,750,000<span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+  <h2>₦2,750,000   <a style="float: right; text-decoration: none; color: black;" href="/pay">Buy Now</a></h2>
     </div>
   </div>
   </div>
@@ -168,7 +166,7 @@
       <i class="fa-solid fa-star checked"></i>
       <i class="fa-solid fa-star checked"></i>
     </div>
-    <h2>₦10,000 <span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+    <h2>₦10,000 <a style="float: right; text-decoration: none; color: black;" href="/pay">Buy Now</a></h2>
       </div>
     </div>
     </div>
@@ -186,7 +184,7 @@
         <i class="fa-solid fa-star checked"></i>
         <i class="fa-solid fa-star checked"></i>
       </div>
-      <h2>₦186,666 <span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+      <h2>₦186,666 <a style="float: right; text-decoration: none; color: black;" href="/pay">Buy Now</a></h2>
         </div>
       </div>
       </div>
@@ -207,7 +205,7 @@
     <i class="fa-solid fa-star checked"></i>
     <i class="fa-solid fa-star checked"></i>
   </div>
-  <h2>₦26,500<span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+  <h2>₦26,500 <span>Buy now</span></h2>
     </div>
   </div>
   </div>
@@ -225,7 +223,7 @@
       <i class="fa-solid fa-star checked"></i>
       <i class="fa-solid fa-star checked"></i>
     </div>
-    <h2>₦160,000 <span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+    <h2>₦160,000 <span>Buy Now</span></h2>
       </div>
     </div>
     </div>
@@ -243,7 +241,7 @@
         <i class="fa-solid fa-star checked"></i>
         <i class="fa-solid fa-star checked"></i>
       </div>
-      <h2>₦250,000 <span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+      <h2>₦250,000 <span>Buy Now</span></h2>
         </div>
       </div>
       </div>
@@ -261,7 +259,7 @@
           <i class="fa-solid fa-star checked"></i>
           <i class="fa-solid fa-star checked"></i>
         </div>
-        <h2>₦14896 <span><i class="fa-solid fa-cart-shopping"></i></span></h2>
+        <h2>₦14896 <span>Buy Now</span></h2>
           </div>
         </div>
         </div>
@@ -280,10 +278,10 @@
       <div class="card">
         <img src="/static/images/laptop2.jpg" alt="">
         
-          <h3> Best HP Laptop</h3>
+          <h3>HP Laptop</h3>
           <h5>Latest Version</h5>
           <p>Up To 10% Off</p>
-          <button id="shopnow">Shop Now</button>
+          <button id="shopnow">Buy Now</button>
         </div>
       </div>
     
@@ -291,29 +289,29 @@
       <div class="card">
         <img src="/static/images/head2.jpg" alt="">
         
-          <h3>Best Headphone</h3>
+          <h3> Headphone</h3>
           <h5>Latest Version</h5>
           <p>Up To 10% Off</p>
-          <button id="shopnow">Shop Now</button>
+          <button id="shopnow">Buy Now</button>
         </div>
 </div>
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
         <img src="/static/images/iphone.png" alt="">
-        <h3>Best iphone Pro Max</h3>
+        <h3>Iphone</h3>
           <h5>Latest Collection</h5>
           <p>Up To 10% Off</p>
-          <button id="shopnow">Shop Now</button>
+          <button id="shopnow">Buy Now</button>
         </div>
       </div>
     
     <div class="col-md-3 py-3 py-md-0">
       <div class="card">
         <img src="/static/images/ipad.jpg" alt="">
-        <h3>Best Apple Ipad Air</h3>
+        <h3>Apple Ipad Air</h3>
           <h5>Latest Version</h5>
           <p>Up To 10% Off</p>
-          <button id="shopnow">Shop Now</button>
+          <button id="shopnow">Buy Now</button>
         </div>
       </div>
   </div>
@@ -334,7 +332,7 @@
         <p class="quality">Quality and affordable electronic gadgets @ swift's electronic store.
           <br>Buy now and pay later.
         </p>
-        <div class="btn"><button>Shop Now</button></div>
+        <div class="btn"><button>Buy Now</button></div>
   </div>
       <div class="img">
         <img src="/static/images/kitchen9.jpg" alt="" style="height: 400px; margin-top: 0px; margin-bottom: none;">
@@ -362,7 +360,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦800,000<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦800,000<span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -379,7 +377,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦56,500 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦56,500 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -396,7 +394,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦20,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦20,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -413,7 +411,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦150,000<span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦150,000<span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -475,7 +473,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦50,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦50,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -492,7 +490,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦350,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦350,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -509,7 +507,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦25,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦25,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -526,7 +524,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦25,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦25,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -546,7 +544,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦23,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦23,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -563,7 +561,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦52,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦52,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -580,7 +578,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦140,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦140,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -597,7 +595,7 @@
                 <i class="fa-solid fa-star checked"></i>
                 <i class="fa-solid fa-star checked"></i>
               </div>
-              <h2>₦250,000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+              <h2>₦250,000 <span>Buy Now</span></h2>
             </div>
           </div>
         </div>
@@ -672,7 +670,7 @@
                 Bode<br>
               </p>
               <strong>Phone:</strong> +23408022222222<br>
-              <strong>Email:</strong> teamswift@gmail.com <br>
+              <strong>Email:</strong> teamswifttech@gmail.com <br>
             </div>
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Take note</h4>
