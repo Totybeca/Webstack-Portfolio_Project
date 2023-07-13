@@ -1,1 +1,1 @@
-Welcome to the Electronic Store Application project. This application was successfully created by Toyin Fashemore and Light Enyinnah as front-end engineers and Bode Olaleye and James Nwamah as backe-end engineers. 
+Welcome to the Electronic Store Application project. This application was successfully created by Toyin Fashemore and Light Enyinnah as front-end engineers and Bode Olaleye and James Nwamah as back-end engineers. 
