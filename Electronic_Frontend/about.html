@@ -227,13 +227,14 @@ margin-bottom: 6px;
 <body>
   <!--Nav bar at the top-->
 <div class="top-navbar">
-  <p>WELCOME TO TEAM SWIFT SHOP</p>
+  <p class="smtop">WELCOME TO TEAM SWIFT SHOP</p>
   <div class="icons">
 		   {% if session.fullname %}
 			   Welcome {{ session.fullname }} <button type="button" onClick="if(confirm('Logout Now')) window.location = '/logout';" class="btn btn-secondary btn-sm" style="margin-right: 20px;">logout</button>.
 			{% else %}
-				<a href="/login"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Login</a>
-				<a href="/register" style="margin: 20px;"><i class="fa-solid fa-right-to-bracket" style="color: red;"></i></i>Register</a>
+				<a href="/login"><i class="fa-solid fa-pen-to-square" style="color: red;"></i><span class="dmtop">Login</span></a>
+				<a href="/register" style="margin-right:20px; margin-left: 10px;"><i class="fa-solid fa-pen-to-square" style="color: red;"></i>
+				<span class="dmtop">Register</span></a>
 			{% endif %}
 		</div>
 </div>
@@ -251,24 +252,21 @@ margin-bottom: 6px;
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Our Products</a>
-        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            All Categories
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
-            <li><a class="dropdown-item" href="#" target="blank">Mobile phones</a></li>
-            <li><a class="dropdown-item" href="#" target="blank">Computers</a></li>
-            <li><a class="dropdown-item" href="#" target="blank">Air Conditioners</a></li>
-            <li><a class="dropdown-item" href="#" target="blank">AirPods</a></li>
-            <li><a class="dropdown-item" href="#" target="blank">Smart Watches</a></li>
-            <li><a class="dropdown-item" href="#" target="blank">Head Phones</a></li>
-            <li><a class="dropdown-item" href="#" target="blank">Washine Machines</a></li>
-            <li><a class="dropdown-item" href="#" target="blank">PC Monitors</a></li>
-          </ul>
-          </li>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+              <li><a class="dropdown-item" href="#" target="blank">Mobile phones</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Computers</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Air Conditioners</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">AirPods</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Smart Watches</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Head Phones</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">Washine Machines</a></li>
+              <li><a class="dropdown-item" href="#" target="blank">PC Monitors</a></li>
+            </ul>
+            </li>
           <li class="nav-item">
               <a class="nav-link" href="/about">About Us</a>
           </li>
